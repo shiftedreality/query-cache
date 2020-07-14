@@ -11,6 +11,18 @@ services:
       magento:
         aliases:
           - mariadb103.magento2.docker
+  mariadb104nc:
+    hostname: mariadb104nc.magento2.docker
+    image: 'mariadb:10.4'
+    env_file:
+      - db.env
+    ports:
+      - '3306'
+    networks:
+      magento:
+        aliases:
+          - mariadb104nc.magento2.docker
+    command: '--query_cache_size=0 --query_cache_type=0'
   mariadb104:
     hostname: mariadb104.magento2.docker
     image: 'mariadb:10.4'

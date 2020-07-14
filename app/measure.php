@@ -51,6 +51,8 @@ $tester->write('MariaDB 10.3');
 $tester->write($tester->test('mariadb103', '3306'));
 $tester->write('MariaDB 10.4');
 $tester->write($tester->test('mariadb104', '3306'));
+$tester->write('MariaDB 10.4 cahe disabled');
+$tester->write($tester->test('mariadb104nc', '3306'));
 $tester->write('MySQL 5.6');
 $tester->write($tester->test('mysql5', '3306'));
 $tester->write('MySQL 8.0');
